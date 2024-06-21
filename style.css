@@ -1,0 +1,156 @@
+body {
+    background: #b2d8ff;
+    font-family: sans-serif;
+}
+
+.beginHidden {
+    display: none;
+}
+
+#divIngame {
+    user-select: none;
+}
+.letter {
+    background: whitesmoke;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin: 5px;
+    user-select: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 2px lightblue;
+    transition-property: box-shadow, background-color;
+    position: relative;
+}
+.letterInner {
+    /*background-color: blue;*/
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.letterWeight {
+    font-size: 10pt;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+
+}
+
+@keyframes failed-letter-animation {
+    10%, 30% {
+        background-color: #f6d1ac;
+        box-shadow: 0 0 5px 2px red;
+    }
+    to {
+        background: whitesmoke;
+        box-shadow: 0 0 5px 2px lightblue;
+    }
+}
+@keyframes successful-letter-animation {
+    10%, 30% {
+        background-color: #bcf616;
+        box-shadow: 0 0 5px 2px lime;
+    }
+    to {
+        background: whitesmoke;
+        box-shadow: 0 0 5px 2px lightblue;
+    }
+}
+@keyframes repeated-letter-animation {
+    10%, 30% {
+        background-color: #f6ebaa;
+        box-shadow: 0 0 5px 2px orange;
+    }
+    to {
+        background: whitesmoke;
+        box-shadow: 0 0 5px 2px lightblue;
+    }
+}
+
+.fadingLetter {
+    transition-duration: 1s;
+    animation-duration: 1s;
+}
+.highlightedLetter {
+    background: #ecf968;
+    box-shadow: 0 0 5px 2px yellow;
+    transition-duration: 0.1s;
+}
+.failedLetter {
+    animation-name: failed-letter-animation;
+}
+.repeatedLetter {
+    animation-name: repeated-letter-animation;
+}
+.successfulLetter {
+    animation-name: successful-letter-animation;
+}
+
+#divEverything {
+    background: #f3f6ff;
+    border: 1px solid darkblue;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+}
+
+h1 {
+    font-variant: small-caps;
+}
+
+h3 {
+    font-variant: small-caps;
+}
+
+.divPlayerList {
+    margin: 10px auto 10px auto;
+    text-align: left;
+    padding: 5px;
+    max-width: 500px;
+    background: #eff6f6;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+input[type="button"] {
+    padding: 10px;
+    margin: 4px auto 4px auto;
+}
+
+#bFinishThisGame {
+    margin-top: 30px;
+    background: pink;
+    border-color: red;
+}
+#divTimeRemaining {
+}
+#divFormedWord {
+    font-size: 30px;
+    font-family: monospace;
+}
+.divAboveBoard {
+    margin: 0 auto 5px auto;
+    height: 40px;
+    max-width: 500px;
+    border: 1px solid darkblue;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#divVolumeControl {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+#bMute {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

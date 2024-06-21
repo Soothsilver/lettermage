@@ -1,0 +1,13 @@
+Server:
+- Better board algorithm
+
+Client:
+- Touch control - second move does not work
+- Arrows between letters
+
+Playtesting:
+- Ask for playtesting
+
+Wordament has:
+- Themed boards
+- Multi-letter tiles

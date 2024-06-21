@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lettermage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+<div id="divEverything">
+    <div id="divLobby" class="beginHidden">
+        <h1>Lettermage</h1>
+        <div>Lobby name: <b><span id="spanLobbyGameName"></span></b> (<a href="javascript:;" id="aCopyLobbyNameToClipboard">copy to cliboard</a>)</div>
+        <div id="divYourName">
+            <h3>Choose Your Name:</h3>
+            <form id="formChooseYourName">
+                <input type="text" id="tbYourName" placeholder="Your name..." autofocus>
+                <input type="submit" id="bChooseName" value="Join">
+            </form>
+            <span id="lblChooseYourNameError"></span>
+        </div>
+        <div class="divPlayerList">
+            Players in lobby:
+            <ul id="ulPlayerList"></ul>
+        </div>
+        <input type="button" id="bStartForEveryone" value="You can't start the game if you're not in it yourself." disabled>
+    </div>
+    <div id="divIngame" class="beginHidden">
+        <div id="divTimeRemaining" class="divAboveBoard">
+
+        </div>
+        <div id="divFormedWord" class="divAboveBoard">
+
+        </div>
+        <div id="divGrid">
+            <div class="letter">A</div>
+            <div class="letter">A</div>
+            <div class="letter">A</div>
+            <div class="letter">A</div>
+        </div>
+        <input id="bFinishThisGame" value="End game now for everyone" type="button">
+    </div>
+    <div id="divFinalLeaderboard" class="beginHidden">
+        <h1>Lettermage</h1>
+        <div class="divPlayerList">
+            <h3>Final leaderboard</h3>
+            <ol id="ulFinalPlayerList"></ol>
+            <small>Best words found: <i><span id="spanBestWords"></span></i></small>
+        </div>
+        <input id="bRestartGame" value="Restart game" type="button">
+    </div>
+    <div id="divVolumeControl">
+        <button id="bMute">
+            <img src="art/audio.png" id="imgMute" width="16" height="16">
+        </button><input type="range" min="0" max="100" value="0.4" id="rangeVolume">
+    </div>
+</div>
+</body>
+</html>
